@@ -37,14 +37,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-  self = [super initWithFrame:frame];
-  if (!self) {
-    return nil;
-  }
-  
-  [self commonInit];
-  
-  return self;
+  return [self initWithFrame:frame shineInOrder:NO];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -58,6 +51,19 @@
   
   [self setText:self.text];
   
+  return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame shineInOrder:(BOOL)flag
+{
+  self = [super initWithFrame:frame];
+  if (!self) {
+      return nil;
+  }
+
+  _shineInOrder = flag;
+  [self commonInit];
+
   return self;
 }
 
@@ -94,11 +100,18 @@
 {
   self.attributedString = [self initialAttributedStringFromAttributedString:attributedText];
 	[super setAttributedText:self.attributedString];
-	for (NSUInteger i = 0; i < attributedText.length; i++) {
-		self.characterAnimationDelays[i] = @(arc4random_uniform(self.shineDuration / 2 * 100) / 100.0);
-		CGFloat remain = self.shineDuration - [self.characterAnimationDelays[i] floatValue];
-		self.characterAnimationDurations[i] = @(arc4random_uniform(remain * 100) / 100.0);
-	}
+    if (_shineInOrder) {
+        for (NSUInteger i = 0; i < attributedText.length; i++) {
+            self.characterAnimationDelays[i] = @((i + 1.0) / self.attributedString.length);
+            self.characterAnimationDurations[i] = @(0.2f);
+        }
+    } else {
+        for (NSUInteger i = 0; i < attributedText.length; i++) {
+            self.characterAnimationDelays[i] = @(arc4random_uniform(self.shineDuration / 2 * 100) / 100.0);
+            CGFloat remain = self.shineDuration - [self.characterAnimationDelays[i] floatValue];
+            self.characterAnimationDurations[i] = @(arc4random_uniform(remain * 100) / 100.0);
+        }
+    }
 }
 
 - (void)shine
@@ -146,7 +159,7 @@
 - (void)startAnimationWithDuration:(CFTimeInterval)duration
 {
   self.beginTime = CACurrentMediaTime();
-  self.endTime = self.beginTime + self.shineDuration;
+  self.endTime = self.beginTime + self.shineDuration + 1;
   self.displaylink.paused = NO;
 }
 

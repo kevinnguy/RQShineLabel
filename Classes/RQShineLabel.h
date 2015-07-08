@@ -37,6 +37,16 @@
 @property (assign, nonatomic, readonly, getter = isVisible) BOOL visible;
 
 /**
+ *  Text shines in order sequentially
+ */
+@property (assign, nonatomic, readonly, getter = isShiningInOrder) BOOL shineInOrder;
+
+/**
+ *  Custom initialization
+ */
+- (instancetype)initWithFrame:(CGRect)frame shineInOrder:(BOOL)flag;
+
+/**
  *  Start the animation
  */
 - (void)shine;

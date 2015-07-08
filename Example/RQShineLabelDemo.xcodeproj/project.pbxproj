@@ -15,22 +15,9 @@
 		37B08318191A668C00620618 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B08317191A668C00620618 /* main.m */; };
 		37B0831C191A668C00620618 /* RQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0831B191A668C00620618 /* RQAppDelegate.m */; };
 		37B0831E191A668C00620618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0831D191A668C00620618 /* Images.xcassets */; };
-		37B08325191A668C00620618 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B08324191A668C00620618 /* XCTest.framework */; };
-		37B08326191A668C00620618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0830B191A668B00620618 /* Foundation.framework */; };
-		37B08327191A668C00620618 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0830F191A668C00620618 /* UIKit.framework */; };
 		37B08346191A680800620618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B08343191A680800620618 /* Main.storyboard */; };
 		37B08347191A680800620618 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B08345191A680800620618 /* ViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		37B08328191A668C00620618 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37B08300191A668B00620618 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 37B08307191A668B00620618;
-			remoteInfo = RQShineLabelDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		379C034A191A6EF800EBFBA3 /* RQShineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RQShineLabel.h; path = ../Classes/RQShineLabel.h; sourceTree = "<group>"; };
@@ -46,7 +33,6 @@
 		37B0831A191A668C00620618 /* RQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RQAppDelegate.h; sourceTree = "<group>"; };
 		37B0831B191A668C00620618 /* RQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RQAppDelegate.m; sourceTree = "<group>"; };
 		37B0831D191A668C00620618 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		37B08323191A668C00620618 /* RQShineLabelDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RQShineLabelDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B08324191A668C00620618 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		37B08343191A680800620618 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		37B08344191A680800620618 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -62,16 +48,6 @@
 				37B0830E191A668B00620618 /* CoreGraphics.framework in Frameworks */,
 				37B08310191A668C00620618 /* UIKit.framework in Frameworks */,
 				37B0830C191A668B00620618 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37B08320191A668C00620618 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37B08325191A668C00620618 /* XCTest.framework in Frameworks */,
-				37B08327191A668C00620618 /* UIKit.framework in Frameworks */,
-				37B08326191A668C00620618 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				37B08308191A668B00620618 /* RQShineLabelDemo.app */,
-				37B08323191A668C00620618 /* RQShineLabelDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,24 +138,6 @@
 			productReference = 37B08308191A668B00620618 /* RQShineLabelDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		37B08322191A668C00620618 /* RQShineLabelDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 37B08337191A668C00620618 /* Build configuration list for PBXNativeTarget "RQShineLabelDemoTests" */;
-			buildPhases = (
-				37B0831F191A668C00620618 /* Sources */,
-				37B08320191A668C00620618 /* Frameworks */,
-				37B08321191A668C00620618 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				37B08329191A668C00620618 /* PBXTargetDependency */,
-			);
-			name = RQShineLabelDemoTests;
-			productName = RQShineLabelDemoTests;
-			productReference = 37B08323191A668C00620618 /* RQShineLabelDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,11 +147,6 @@
 				CLASSPREFIX = RQ;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Reteq;
-				TargetAttributes = {
-					37B08322191A668C00620618 = {
-						TestTargetID = 37B08307191A668B00620618;
-					};
-				};
 			};
 			buildConfigurationList = 37B08303191A668B00620618 /* Build configuration list for PBXProject "RQShineLabelDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -209,7 +161,6 @@
 			projectRoot = "";
 			targets = (
 				37B08307191A668B00620618 /* RQShineLabelDemo */,
-				37B08322191A668C00620618 /* RQShineLabelDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,13 +173,6 @@
 				37B08346191A680800620618 /* Main.storyboard in Resources */,
 				37B08316191A668C00620618 /* InfoPlist.strings in Resources */,
 				37B0831E191A668C00620618 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37B08321191A668C00620618 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,22 +190,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37B0831F191A668C00620618 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		37B08329191A668C00620618 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 37B08307191A668B00620618 /* RQShineLabelDemo */;
-			targetProxy = 37B08328191A668C00620618 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		37B08314191A668C00620618 /* InfoPlist.strings */ = {
@@ -373,46 +302,6 @@
 			};
 			name = Release;
 		};
-		37B08338191A668C00620618 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RQShineLabelDemo.app/RQShineLabelDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RQShineLabelDemo/RQShineLabelDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "RQShineLabelDemoTests/RQShineLabelDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		37B08339191A668C00620618 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RQShineLabelDemo.app/RQShineLabelDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RQShineLabelDemo/RQShineLabelDemo-Prefix.pch";
-				INFOPLIST_FILE = "RQShineLabelDemoTests/RQShineLabelDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,15 +319,6 @@
 			buildConfigurations = (
 				37B08335191A668C00620618 /* Debug */,
 				37B08336191A668C00620618 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		37B08337191A668C00620618 /* Build configuration list for PBXNativeTarget "RQShineLabelDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				37B08338191A668C00620618 /* Debug */,
-				37B08339191A668C00620618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

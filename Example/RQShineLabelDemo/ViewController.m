@@ -54,7 +54,8 @@
   [self.view addSubview:self.wallpaper2];
   
   self.shineLabel = ({
-    RQShineLabel *label = [[RQShineLabel alloc] initWithFrame:CGRectMake(16, 16, 320 - 32, CGRectGetHeight(self.view.bounds) - 16)];
+    RQShineLabel *label = [[RQShineLabel alloc] initWithFrame:CGRectMake(16, 16, 320 - 32, CGRectGetHeight(self.view.bounds) - 16) shineInOrder:YES];
+    label.shineDuration = 3.0f;
     label.numberOfLines = 0;
     label.text = [self.textArray objectAtIndex:self.textIndex];
     label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0];
