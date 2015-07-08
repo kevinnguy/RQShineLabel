@@ -159,7 +159,7 @@
 - (void)startAnimationWithDuration:(CFTimeInterval)duration
 {
   self.beginTime = CACurrentMediaTime();
-  self.endTime = self.beginTime + self.shineDuration + 1;
+  self.endTime = self.beginTime + self.shineDuration + 0.1f;
   self.displaylink.paused = NO;
 }
 
